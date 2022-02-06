@@ -5,7 +5,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+              name: Checkout Current branch
             - uses: actions/setup-node@v2
+              name: Install Node.js
               with:
                 node-version: '14.19.0'
             - run: node -v
+            - name: Install node packages
+              run : npm i
+            - name: Build React app
+              run: npm run build
+            - name: Setup finished
+              run: echo "Finished Setup. Hurray!!!"
