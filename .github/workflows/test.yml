@@ -12,8 +12,8 @@ jobs:
                 node-version: '14.19.0'
             - run: node -v
             - name: Install node packages
-              run : npm i
+              run : yarn
             - name: Build React app
-              run: npm run build
+              run: yarn build
             - name: Setup finished
               run: echo "Finished Setup. Hurray!!!"
