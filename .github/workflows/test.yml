@@ -6,3 +6,8 @@ jobs:
         steps:
             - run: echo "Hello World!!!"
             - run: echo "This is second step"
+    print-hello-github-actions:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Hello github-actions!!!"
+            - run: echo "Understanding about order of actions"
