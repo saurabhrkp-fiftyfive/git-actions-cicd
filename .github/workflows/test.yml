@@ -1,13 +1,9 @@
 name: My First Github Actions
 on: [push]
 jobs:
-    print-hello-world:
+    build-app:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Hello World!!!"
-            - run: echo "This is second step"
-    print-hello-github-actions:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo "Hello github-actions!!!"
-            - run: echo "Understanding about order of actions"
+            - run: tree
+            - uses: actions/checkout@v2
+            - run: tree
